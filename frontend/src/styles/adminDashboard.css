@@ -1,0 +1,568 @@
+
+/* ==========================
+   VENDRA — ADMIN DASHBOARD
+   Premium Lavender Theme
+========================== */
+
+
+/* ==========================
+   MAIN CONTAINER
+========================== */
+
+.admin-dashboard {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 45px 25px 60px;
+
+    color: #172033;
+}
+
+
+/* ==========================
+   DASHBOARD HEADER
+========================== */
+
+.dashboard-header {
+    margin-bottom: 10px;
+}
+
+.dashboard-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+.dashboard-logo {
+    width: 58px;
+    height: 58px;
+
+    object-fit: contain;
+
+    padding: 8px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8e5f0;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 22px rgba(91, 63, 212, 0.08);
+}
+
+.admin-label {
+    display: inline-block;
+
+    margin-bottom: 5px;
+
+    padding: 5px 9px;
+
+    background: #ede9fe;
+
+    color: #6d4fe8;
+
+    border-radius: 6px;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+}
+
+.dashboard-header h2 {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 2rem;
+
+    font-weight: 800;
+
+    letter-spacing: -0.7px;
+}
+
+
+/* ==========================
+   WELCOME
+========================== */
+
+.welcome-text {
+    margin: 20px 0 30px;
+
+    color: #687083;
+
+    font-size: 0.98rem;
+}
+
+.welcome-text span {
+    color: #7c5cfc;
+
+    font-weight: 700;
+}
+
+
+/* ==========================
+   STATS GRID
+========================== */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* ==========================
+   STAT CARD
+========================== */
+
+.stat-card {
+    position: relative;
+
+    min-height: 125px;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8e5f0;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(91, 63, 212, 0.06);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.stat-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7c5cfc,
+            #c4b5fd,
+            #f3a8d8
+        );
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #d7cff7;
+
+    box-shadow:
+        0 15px 35px rgba(91, 63, 212, 0.10);
+}
+
+
+/* ==========================
+   STAT ICON
+========================== */
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    font-size: 1rem;
+
+    font-weight: 800;
+}
+
+.purple-icon {
+    background: #ede9fe;
+
+    color: #7c5cfc;
+}
+
+.pink-icon {
+    background: #fce7f3;
+
+    color: #d86ba9;
+}
+
+.lavender-icon {
+    background: #f0ebff;
+
+    color: #6d4fe8;
+}
+
+.green-icon {
+    background: #ecfdf5;
+
+    color: #22b573;
+}
+
+
+/* ==========================
+   STAT TITLE
+========================== */
+
+.stat-card h4 {
+    margin: 0 0 7px;
+
+    color: #687083;
+
+    font-size: 0.83rem;
+
+    font-weight: 600;
+}
+
+
+/* ==========================
+   STAT NUMBER
+========================== */
+
+.stat-number {
+    color: #172033;
+
+    font-size: 1.65rem;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* ==========================
+   LOADING
+========================== */
+
+.loading-metrics {
+    text-align: center;
+
+    margin: 40px 0;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8e5f0;
+
+    border-radius: 18px;
+
+    color: #7c5cfc;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 8px 25px rgba(91, 63, 212, 0.05);
+}
+
+
+/* ==========================
+   ADMIN CONTROLS
+========================== */
+
+.admin-controls {
+    margin-top: 35px;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    border: 1px solid #e8e5f0;
+
+    box-shadow:
+        0 12px 35px rgba(91, 63, 212, 0.06);
+}
+
+
+/* ==========================
+   CONTROLS HEADING
+========================== */
+
+.controls-heading {
+    margin-bottom: 22px;
+}
+
+.controls-heading h3 {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 1.3rem;
+
+    font-weight: 800;
+}
+
+.controls-heading p {
+    margin: 6px 0 0;
+
+    color: #8b91a1;
+
+    font-size: 0.9rem;
+}
+
+
+/* ==========================
+   CONTROL BUTTONS
+========================== */
+
+.control-buttons {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+
+/* ==========================
+   ADMIN BUTTON
+========================== */
+
+.admin-btn {
+    width: 100%;
+
+    min-height: 82px;
+
+    padding: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    background: #faf9ff;
+
+    color: #172033;
+
+    border: 1px solid #e8e5f0;
+
+    border-radius: 16px;
+
+    font-family: inherit;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.admin-btn:hover {
+    transform: translateY(-2px);
+
+    background: #ffffff;
+
+    border-color: #cfc5ff;
+
+    box-shadow:
+        0 8px 20px rgba(91, 63, 212, 0.08);
+}
+
+
+/* ==========================
+   PRIMARY ADMIN BUTTON
+========================== */
+
+.primary-admin-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #f3f0ff,
+            #faf9ff
+        );
+
+    border-color: #d8ceff;
+}
+
+
+/* ==========================
+   CONTROL ICON
+========================== */
+
+.control-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ede9fe;
+
+    color: #7c5cfc;
+
+    border-radius: 12px;
+
+    font-size: 1rem;
+
+    font-weight: 800;
+}
+
+
+/* ==========================
+   CONTROL TEXT
+========================== */
+
+.admin-btn span:nth-child(2) {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.admin-btn strong {
+    color: #30394d;
+
+    font-size: 0.9rem;
+}
+
+.admin-btn small {
+    color: #9aa1b2;
+
+    font-size: 0.75rem;
+}
+
+
+/* ==========================
+   ARROW
+========================== */
+
+.control-arrow {
+    color: #a59bd0;
+
+    font-size: 1.2rem;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+.admin-btn:hover .control-arrow {
+    color: #7c5cfc;
+
+    transform: translateX(4px);
+}
+
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 950px) {
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 650px) {
+
+    .admin-dashboard {
+        padding: 30px 15px 45px;
+    }
+
+    .dashboard-brand {
+        gap: 12px;
+    }
+
+    .dashboard-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .dashboard-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .control-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-controls {
+        padding: 22px 18px;
+
+        border-radius: 20px;
+    }
+}
+
+
+/* ==========================
+   SMALL MOBILE
+========================== */
+
+@media (max-width: 420px) {
+
+    .dashboard-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .dashboard-logo {
+        width: 44px;
+        height: 44px;
+    }
+
+    .stat-card {
+        padding: 18px;
+    }
+
+    .stat-number {
+        font-size: 1.45rem;
+    }
+}
+

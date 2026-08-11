@@ -1,0 +1,208 @@
+/* =====================================================
+   VENDRA — FOOTER
+   Fresh Premium Minimalism
+   ===================================================== */
+
+.footer {
+  background: var(--surface);
+
+  border-top: 1px solid var(--border);
+
+  margin-top: 80px;
+
+  padding: 55px 5% 25px;
+}
+
+
+/* =====================================================
+   FOOTER CONTAINER
+   ===================================================== */
+
+.footer-container {
+  width: min(1200px, 100%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1.3fr 1fr auto;
+
+  align-items: center;
+
+  gap: 40px;
+}
+
+
+/* =====================================================
+   BRAND
+   ===================================================== */
+
+.footer-logo h2 {
+  margin-bottom: 8px;
+
+  color: var(--text-primary);
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 1.8rem;
+  font-weight: 800;
+
+  letter-spacing: -0.7px;
+}
+
+.footer-logo h2::first-letter {
+  color: var(--primary);
+}
+
+.footer-logo p {
+  color: var(--text-secondary);
+
+  font-size: 0.92rem;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   FOOTER LINKS
+   ===================================================== */
+
+.footer-links {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 28px;
+
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  position: relative;
+
+  color: var(--text-secondary);
+
+  font-size: 0.92rem;
+
+  font-weight: 600;
+
+  transition:
+    color 0.2s ease;
+}
+
+.footer-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0;
+  height: 2px;
+
+  background: var(--primary);
+
+  border-radius: 10px;
+
+  transition: width 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+
+/* =====================================================
+   COPYRIGHT
+   ===================================================== */
+
+.footer-copy {
+  color: var(--text-muted);
+
+  font-size: 0.85rem;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   RESPONSIVE — TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+
+    text-align: center;
+  }
+
+  .footer-logo {
+    text-align: left;
+  }
+
+  .footer-copy {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding-top: 15px;
+
+    border-top: 1px solid var(--border-light);
+  }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE — MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+  .footer {
+    margin-top: 55px;
+
+    padding: 45px 5% 22px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    text-align: center;
+  }
+
+  .footer-logo {
+    text-align: center;
+  }
+
+  .footer-logo h2 {
+    font-size: 1.6rem;
+  }
+
+  .footer-links {
+    gap: 18px;
+  }
+
+  .footer-copy {
+    grid-column: auto;
+
+    border-top: none;
+
+    padding-top: 0;
+
+    white-space: normal;
+
+    line-height: 1.5;
+  }
+
+}

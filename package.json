@@ -1,0 +1,25 @@
+{
+  "name": "shopnest-full-stack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": 
+  {
+ 
+  "install": "cd \"backend(1)\" && npm install && cd .. && cd frontend && npm install",
+  "dev:server": "cd \"backend(1)\" && npm run dev",
+  "dev:client": "cd frontend && npm run dev",
+  "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+  "build": "cd frontend && npm run build"
+
+  },
+
+  "keywords": [
+    "ujalamicroservice"
+  ],
+  "author": "ujala",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^10.0.4"
+  }
+}

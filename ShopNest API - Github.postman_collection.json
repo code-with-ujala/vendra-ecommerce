@@ -1,0 +1,513 @@
+{
+  "info": {
+    "_postman_id": "9f1ffa97-9001-481f-8fdd-1d8abe696e03",
+    "name": "ShopNest API - Github",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52752068"
+  },
+  "item": [
+    {
+      "name": "🔐 Auth",
+      "item": [
+        {
+          "name": "POST Register",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "verify-email",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "POST Login",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "👤 Users",
+      "item": []
+    },
+    {
+      "name": "📦 Products",
+      "item": [
+        {
+          "name": "Get all products",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "ADMIN- Update product",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_JWT_TOKEN"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "type": "text",
+                  "key": "name",
+                  "value": "Samsung Galaxy S25"
+                },
+                {
+                  "type": "text",
+                  "key": "description",
+                  "value": "Samsung Flagship Phone"
+                },
+                {
+                  "type": "text",
+                  "key": "price",
+                  "value": "74999"
+                },
+                {
+                  "type": "text",
+                  "key": "category",
+                  "value": "Mobile"
+                },
+                {
+                  "type": "text",
+                  "key": "stock",
+                  "value": "15"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/products/PRODUCT_ID",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "products",
+                "PRODUCT_ID"
+              ]
+            },
+            "description": "Generated from cURL: curl --location --request PUT 'http://localhost:5000/api/products/PRODUCT_ID' \\\r\n--header 'Authorization: Bearer YOUR_JWT_TOKEN' \\\r\n--form 'name=\"Samsung Galaxy S25\"' \\\r\n--form 'description=\"Samsung Flagship Phone\"' \\\r\n--form 'price=\"74999\"' \\\r\n--form 'category=\"Mobile\"' \\\r\n--form 'stock=\"15\"'"
+          },
+          "response": []
+        },
+        {
+          "name": "ADMIN--- Create a new product",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_TOKEN"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "type": "text",
+                  "key": "name",
+                  "value": "Nike Air Max"
+                },
+                {
+                  "type": "text",
+                  "key": "description",
+                  "value": "Comfortable Running Shoes"
+                },
+                {
+                  "type": "text",
+                  "key": "price",
+                  "value": "4999"
+                },
+                {
+                  "type": "text",
+                  "key": "category",
+                  "value": "Footwear"
+                },
+                {
+                  "type": "text",
+                  "key": "stock",
+                  "value": "30"
+                },
+                {
+                  "type": "file",
+                  "key": "image",
+                  "src": "C:/Users/hp/Pictures/shoes.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "products"
+              ]
+            },
+            "description": "Generated from cURL: curl --location 'http://localhost:5000/api/products' \\\r\n--header 'Authorization: Bearer YOUR_TOKEN' \\\r\n--form 'name=\"Nike Air Max\"' \\\r\n--form 'description=\"Comfortable Running Shoes\"' \\\r\n--form 'price=\"4999\"' \\\r\n--form 'category=\"Footwear\"' \\\r\n--form 'stock=\"30\"' \\\r\n--form 'image=@C:/Users/hp/Pictures/shoes.jpg'"
+          },
+          "response": []
+        },
+        {
+          "name": "ADMIN- Delete product",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_JWT_TOKEN"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "type": "text",
+                  "key": "name",
+                  "value": "Samsung Galaxy S25"
+                },
+                {
+                  "type": "text",
+                  "key": "description",
+                  "value": "Samsung Flagship Phone"
+                },
+                {
+                  "type": "text",
+                  "key": "price",
+                  "value": "74999"
+                },
+                {
+                  "type": "text",
+                  "key": "category",
+                  "value": "Mobile"
+                },
+                {
+                  "type": "text",
+                  "key": "stock",
+                  "value": "15"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/products/PRODUCT_ID",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "products",
+                "PRODUCT_ID"
+              ]
+            },
+            "description": "Generated from cURL: curl --location --request PUT 'http://localhost:5000/api/products/PRODUCT_ID' \\\r\n--header 'Authorization: Bearer YOUR_JWT_TOKEN' \\\r\n--form 'name=\"Samsung Galaxy S25\"' \\\r\n--form 'description=\"Samsung Flagship Phone\"' \\\r\n--form 'price=\"74999\"' \\\r\n--form 'category=\"Mobile\"' \\\r\n--form 'stock=\"15\"'"
+          },
+          "response": []
+        },
+        {
+          "name": "ADMIN-- Create a new product",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_TOKEN"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "type": "text",
+                  "key": "name",
+                  "value": "HP Laptop"
+                },
+                {
+                  "type": "text",
+                  "key": "description",
+                  "value": "HP Victus Gaming Laptop"
+                },
+                {
+                  "type": "text",
+                  "key": "price",
+                  "value": "65000"
+                },
+                {
+                  "type": "text",
+                  "key": "category",
+                  "value": "Laptop"
+                },
+                {
+                  "type": "text",
+                  "key": "stock",
+                  "value": "15"
+                },
+                {
+                  "type": "file",
+                  "key": "image",
+                  "src": "C:/Users/hp/Pictures/laptop.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "products"
+              ]
+            },
+            "description": "Generated from cURL: curl --location 'http://localhost:5000/api/products' \\\r\n--header 'Authorization: Bearer YOUR_TOKEN' \\\r\n--form 'name=\"HP Laptop\"' \\\r\n--form 'description=\"HP Victus Gaming Laptop\"' \\\r\n--form 'price=\"65000\"' \\\r\n--form 'category=\"Laptop\"' \\\r\n--form 'stock=\"15\"' \\\r\n--form 'image=@C:/Users/hp/Pictures/laptop.jpg'"
+          },
+          "response": []
+        },
+        {
+          "name": "ADMIN---Create a new product",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_JWT_TOKEN"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"iPhone 15\",\r\n    \"description\": \"Apple iPhone 15 128GB Black\",\r\n    \"price\": 79999,\r\n    \"category\": \"Mobile\",\r\n    \"stock\": 20,\r\n    \"imageUrl\": \"https://example.com/iphone15.jpg\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "products"
+              ]
+            },
+            "description": "Generated from cURL: curl --location 'http://localhost:5000/api/products' \\\r\n--header 'Content-Type: application/json' \\\r\n--header 'Authorization: Bearer YOUR_JWT_TOKEN' \\\r\n--data '{\r\n    \"name\": \"iPhone 15\",\r\n    \"description\": \"Apple iPhone 15 128GB Black\",\r\n    \"price\": 79999,\r\n    \"category\": \"Mobile\",\r\n    \"stock\": 20,\r\n    \"imageUrl\": \"https://example.com/iphone15.jpg\"\r\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "Get- Specific product",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "🛒 Cart",
+      "item": []
+    },
+    {
+      "name": "❤️ Wishlist",
+      "item": []
+    },
+    {
+      "name": "📑 Orders",
+      "item": [
+        {
+          "name": "Place a order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_JWT_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"items\": [\r\n    {\r\n      \"product\": \"688a1234567890abcdef1234\",\r\n      \"qty\": 2,\r\n      \"price\": 799\r\n    },\r\n    {\r\n      \"product\": \"688a9876543210abcdef5678\",\r\n      \"qty\": 1,\r\n      \"price\": 499\r\n    }\r\n  ],\r\n  \"totalAmount\": 2097,\r\n  \"address\": {\r\n    \"fullName\": \"Ujala Chinchkhede\",\r\n    \"street\": \"Smriti Nagar\",\r\n    \"city\": \"Bhilai\",\r\n    \"postalCode\": \"490020\",\r\n    \"country\": \"India\"\r\n  },\r\n  \"paymentId\": \"pay_test_123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "orders"
+              ]
+            },
+            "description": "Generated from cURL: curl --location 'http://localhost:5000/api/orders' \\\r\n--header 'Authorization: Bearer YOUR_JWT_TOKEN' \\\r\n--header 'Content-Type: application/json' \\\r\n--data '{\r\n  \"items\": [\r\n    {\r\n      \"product\": \"688a1234567890abcdef1234\",\r\n      \"qty\": 2,\r\n      \"price\": 799\r\n    },\r\n    {\r\n      \"product\": \"688a9876543210abcdef5678\",\r\n      \"qty\": 1,\r\n      \"price\": 499\r\n    }\r\n  ],\r\n  \"totalAmount\": 2097,\r\n  \"address\": {\r\n    \"fullName\": \"Ujala Chinchkhede\",\r\n    \"street\": \"Smriti Nagar\",\r\n    \"city\": \"Bhilai\",\r\n    \"postalCode\": \"490020\",\r\n    \"country\": \"India\"\r\n  },\r\n  \"paymentId\": \"pay_test_123456\"\r\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "Place a order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_JWT_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"items\": [\r\n        {\r\n            \"product\": \"YOUR_PRODUCT_ID_1\",\r\n            \"qty\": 2,\r\n            \"price\": 799\r\n        },\r\n        {\r\n            \"product\": \"YOUR_PRODUCT_ID_2\",\r\n            \"qty\": 1,\r\n            \"price\": 499\r\n        }\r\n    ],\r\n    \"totalAmount\": 2097,\r\n    \"address\": {\r\n        \"fullName\": \"Ujala Chinchkhede\",\r\n        \"street\": \"Smriti Nagar\",\r\n        \"city\": \"Bhilai\",\r\n        \"postalCode\": \"490020\",\r\n        \"country\": \"India\"\r\n    },\r\n    \"paymentId\": \"pay_test_123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:6000/api/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "6000",
+              "path": [
+                "api",
+                "orders"
+              ]
+            },
+            "description": "Generated from cURL: curl --location 'http://localhost:6000/api/orders' \\\r\n--header 'Authorization: Bearer YOUR_JWT_TOKEN' \\\r\n--header 'Content-Type: application/json' \\\r\n--data '{\r\n    \"items\": [\r\n        {\r\n            \"product\": \"YOUR_PRODUCT_ID_1\",\r\n            \"qty\": 2,\r\n            \"price\": 799\r\n        },\r\n        {\r\n            \"product\": \"YOUR_PRODUCT_ID_2\",\r\n            \"qty\": 1,\r\n            \"price\": 499\r\n        }\r\n    ],\r\n    \"totalAmount\": 2097,\r\n    \"address\": {\r\n        \"fullName\": \"Ujala Chinchkhede\",\r\n        \"street\": \"Smriti Nagar\",\r\n        \"city\": \"Bhilai\",\r\n        \"postalCode\": \"490020\",\r\n        \"country\": \"India\"\r\n    },\r\n    \"paymentId\": \"pay_test_123456\"\r\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "ADMIN-- All ORDERS",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "ADMIN- Update Product Status",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "👑 Admin----Get all users",
+      "item": [
+        {
+          "name": "Get users",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ],
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNTIwZGRjZDhiODYxZWExMWMzY2YxYyIsImlhdCI6MTc4Mzc2MjczNSwiZXhwIjoxNzg0MzY3NTM1fQ.Co-u53hoPQZn_4lcSrbSZYacIlM_BYzp3B97dvHqSN0",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Analytics",
+      "item": []
+    },
+    {
+      "name": "ADMIN- Analytics",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}

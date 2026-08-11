@@ -1,0 +1,270 @@
+/* ==========================
+   VENDRA — RETURN POLICY
+   Premium Lavender Theme
+========================== */
+
+.return-policy {
+    min-height: 100vh;
+
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(196, 181, 253, 0.25),
+            transparent 35%
+        ),
+        #f7f5ff;
+}
+
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.return-container {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 45px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8e5f0;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 55px rgba(91, 63, 212, 0.10),
+        0 5px 15px rgba(23, 32, 51, 0.04);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Top Lavender Accent */
+
+.return-container::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #7c5cfc,
+        #c4b5fd,
+        #f3a8d8,
+        #7c5cfc
+    );
+}
+
+
+/* ==========================
+   TITLE
+========================== */
+
+.return-title {
+    margin: 0 0 30px;
+
+    padding-bottom: 18px;
+
+    color: #172033;
+
+    font-size: 2.3rem;
+
+    font-weight: 800;
+
+    letter-spacing: -0.7px;
+
+    border-bottom: 1px solid #eeeaf7;
+}
+
+
+/* ==========================
+   INTRO TEXT
+========================== */
+
+.return-text {
+    margin-bottom: 30px;
+
+    padding: 18px 20px;
+
+    background: #faf9ff;
+
+    border-left: 4px solid #7c5cfc;
+
+    border-radius: 10px;
+
+    color: #687083;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+.return-text strong {
+    color: #6b4ee6;
+
+    font-weight: 800;
+}
+
+
+/* ==========================
+   SECTIONS
+========================== */
+
+.return-section {
+    margin-bottom: 25px;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #eeeaf7;
+
+    border-radius: 14px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.return-section:hover {
+    border-color: #d8cff7;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 22px rgba(91, 63, 212, 0.07);
+}
+
+
+/* ==========================
+   SECTION HEADING
+========================== */
+
+.return-section h4 {
+    margin: 0 0 9px;
+
+    color: #6b4ee6;
+
+    font-size: 1.15rem;
+
+    font-weight: 800;
+}
+
+
+/* ==========================
+   SECTION TEXT
+========================== */
+
+.return-section p {
+    margin: 0;
+
+    color: #687083;
+
+    font-size: 0.96rem;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+.return-footer {
+    margin-top: 32px;
+
+    padding: 20px;
+
+    background: #f7f5ff;
+
+    border: 1px solid #e8e1fb;
+
+    border-radius: 12px;
+
+    color: #687083;
+
+    font-size: 0.92rem;
+
+    line-height: 1.6;
+
+    font-style: italic;
+
+    text-align: center;
+}
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 768px) {
+
+    .return-policy {
+        padding: 35px 15px;
+    }
+
+    .return-container {
+        padding: 30px 22px;
+
+        border-radius: 20px;
+    }
+
+    .return-title {
+        font-size: 1.9rem;
+
+        margin-bottom: 25px;
+    }
+
+    .return-section {
+        padding: 19px;
+    }
+
+    .return-section h4 {
+        font-size: 1.05rem;
+    }
+
+    .return-section p {
+        font-size: 0.91rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .return-container {
+        padding: 25px 18px;
+    }
+
+    .return-title {
+        font-size: 1.6rem;
+    }
+
+    .return-text {
+        padding: 15px;
+
+        font-size: 0.92rem;
+    }
+
+    .return-section {
+        padding: 17px;
+    }
+
+    .return-footer {
+        padding: 16px;
+
+        font-size: 0.85rem;
+    }
+}

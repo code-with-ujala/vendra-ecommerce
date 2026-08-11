@@ -1,0 +1,517 @@
+
+/* ==========================
+   VENDRA — ADD PRODUCT
+   Premium Lavender Admin
+========================== */
+
+
+/* ==========================
+   MAIN CONTAINER
+========================== */
+
+.add-product-container {
+    min-height: 78vh;
+
+    padding: 55px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(196, 181, 253, 0.25),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            rgba(243, 168, 216, 0.14),
+            transparent 30%
+        ),
+        #f7f5ff;
+}
+
+
+/* ==========================
+   PRODUCT CARD
+========================== */
+
+.add-product-card {
+    width: 100%;
+    max-width: 720px;
+
+    padding: 42px;
+
+    background: #ffffff;
+
+    border-radius: 28px;
+
+    border: 1px solid #e8e5f0;
+
+    box-shadow:
+        0 25px 60px rgba(91, 63, 212, 0.09),
+        0 8px 20px rgba(23, 32, 51, 0.04);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* ==========================
+   TOP PURPLE ACCENT
+========================== */
+
+.add-product-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #7c5cfc,
+        #a78bfa,
+        #c4b5fd,
+        #f3a8d8
+    );
+}
+
+
+/* ==========================
+   HEADER
+========================== */
+
+.add-product-header {
+    margin-bottom: 32px;
+}
+
+.admin-label {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    padding: 5px 10px;
+
+    background: #ede9fe;
+
+    color: #6d4fe8;
+
+    border-radius: 7px;
+
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+}
+
+.add-product-header h2 {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 2rem;
+
+    font-weight: 800;
+
+    letter-spacing: -0.7px;
+}
+
+.add-product-header p {
+    margin: 8px 0 0;
+
+    color: #687083;
+
+    font-size: 0.95rem;
+}
+
+
+/* ==========================
+   FORM
+========================== */
+
+.add-product-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* ==========================
+   FIELD
+========================== */
+
+.product-field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    flex: 1;
+}
+
+.product-field label,
+.image-upload > label {
+    color: #30394d;
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+}
+
+
+/* ==========================
+   INPUTS
+========================== */
+
+.product-input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px 15px;
+
+    background: #faf9ff;
+
+    border: 1px solid #e4e0ef;
+
+    border-radius: 12px;
+
+    color: #172033;
+
+    font-size: 15px;
+
+    font-family: inherit;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.product-input::placeholder {
+    color: #a1a6b3;
+}
+
+.product-input:hover {
+    border-color: #cfc5ff;
+
+    background: #ffffff;
+}
+
+.product-input:focus {
+    border-color: #7c5cfc;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(124, 92, 252, 0.10);
+}
+
+
+/* ==========================
+   TEXTAREA
+========================== */
+
+textarea.product-input {
+    min-height: 110px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================
+   PRICE + STOCK
+========================== */
+
+.product-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+/* ==========================
+   PRICE INPUT
+========================== */
+
+.price-input {
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background: #faf9ff;
+
+    border: 1px solid #e4e0ef;
+
+    border-radius: 12px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.price-input:focus-within {
+    border-color: #7c5cfc;
+
+    box-shadow:
+        0 0 0 4px rgba(124, 92, 252, 0.10);
+}
+
+.price-input span {
+    padding-left: 15px;
+
+    color: #7c5cfc;
+
+    font-weight: 800;
+}
+
+.price-input input {
+    width: 100%;
+
+    padding: 14px 10px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #172033;
+
+    font-size: 15px;
+}
+
+
+/* ==========================
+   IMAGE UPLOAD
+========================== */
+
+.image-upload {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.upload-box {
+    min-height: 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    background: #faf9ff;
+
+    border: 1.5px dashed #cfc5ff;
+
+    border-radius: 14px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.upload-box:hover {
+    background: #f5f2ff;
+
+    border-color: #7c5cfc;
+}
+
+.upload-icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    background: #ede9fe;
+
+    color: #7c5cfc;
+
+    border-radius: 12px;
+
+    font-size: 1.3rem;
+
+    font-weight: 800;
+}
+
+.upload-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.upload-content strong {
+    color: #30394d;
+
+    font-size: 0.9rem;
+}
+
+.upload-content span {
+    color: #9aa1b2;
+
+    font-size: 0.8rem;
+}
+
+.upload-box input[type="file"] {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    cursor: pointer;
+}
+
+.selected-image {
+    margin: 2px 0 0;
+
+    color: #22b573;
+
+    font-size: 0.82rem;
+
+    font-weight: 600;
+}
+
+
+/* ==========================
+   PUBLISH BUTTON
+========================== */
+
+.publish-btn {
+    width: 100%;
+
+    margin-top: 6px;
+
+    padding: 15px 20px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: linear-gradient(
+        135deg,
+        #7c5cfc,
+        #5b3fd4
+    );
+
+    color: #ffffff;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(124, 92, 252, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.publish-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 26px rgba(124, 92, 252, 0.26);
+}
+
+.publish-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.publish-btn:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 700px) {
+
+    .add-product-container {
+        padding: 35px 15px;
+    }
+
+    .add-product-card {
+        padding: 32px 22px;
+
+        border-radius: 22px;
+    }
+
+    .add-product-header h2 {
+        font-size: 1.7rem;
+    }
+
+    .product-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 420px) {
+
+    .add-product-card {
+        padding: 28px 18px;
+    }
+
+    .upload-box {
+        padding: 14px;
+    }
+
+    .upload-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+

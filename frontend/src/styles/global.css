@@ -1,0 +1,429 @@
+/* =====================================================
+   VENDRA — GLOBAL THEME
+   Fresh Premium Minimalism
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+
+/* =====================================================
+   DESIGN TOKENS
+   ===================================================== */
+
+:root {
+
+  /* Brand */
+  --primary: #ff6b35;
+  --primary-hover: #e85a2a;
+  --primary-soft: #fff1ec;
+
+  /* Fresh Accent */
+  --accent: #14b8a6;
+  --accent-soft: #e8f8f5;
+
+  /* Background */
+  --background: #f7f7f5;
+  --surface: #ffffff;
+  --surface-soft: #f1f5f4;
+
+  /* Text */
+  --text-primary: #171717;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+
+  /* Borders */
+  --border: #e5e7eb;
+  --border-light: #f0f1f2;
+
+  /* Status */
+  --success: #10b981;
+  --success-soft: #ecfdf5;
+
+  --danger: #ef4444;
+  --danger-soft: #fef2f2;
+
+  --warning: #f59e0b;
+  --warning-soft: #fffbeb;
+
+  --info: #3b82f6;
+  --info-soft: #eff6ff;
+
+  /* Shadows */
+  --shadow-sm:
+    0 2px 8px rgba(15, 23, 42, 0.05);
+
+  --shadow-md:
+    0 8px 24px rgba(15, 23, 42, 0.08);
+
+  --shadow-lg:
+    0 18px 45px rgba(15, 23, 42, 0.11);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  /* Layout */
+  --container-width: 1200px;
+}
+
+
+/* =====================================================
+   RESET
+   ===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BASE
+   ===================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+
+  font-family: 'DM Sans', sans-serif;
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+/* =====================================================
+   TYPOGRAPHY
+   ===================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Manrope', sans-serif;
+  color: var(--text-primary);
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1.05;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   LINKS
+   ===================================================== */
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+   ===================================================== */
+
+.main-content {
+  width: min(1200px, 92%);
+
+  min-height: 85vh;
+
+  padding: 40px 0;
+
+  margin: 0 auto;
+
+  animation: fadeIn 0.45s ease;
+}
+
+
+/* =====================================================
+   VENDRA PRIMARY BUTTON
+   ===================================================== */
+
+.btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  background: var(--primary);
+  color: #ffffff;
+
+  padding: 12px 22px;
+
+  border: none;
+  border-radius: var(--radius-sm);
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+
+  box-shadow:
+    0 6px 18px rgba(255, 107, 53, 0.20);
+}
+
+.btn:hover {
+  background: var(--primary-hover);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(255, 107, 53, 0.28);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* =====================================================
+   SECONDARY BUTTON
+   ===================================================== */
+
+.btn-secondary {
+  background: var(--text-primary);
+  color: #ffffff;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.btn-secondary:hover {
+  background: #292929;
+}
+
+
+/* =====================================================
+   CARD SYSTEM
+   ===================================================== */
+
+.card {
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: var(--shadow-md);
+}
+
+
+/* =====================================================
+   FORM ELEMENTS
+   ===================================================== */
+
+input,
+textarea,
+select {
+  width: 100%;
+
+  background: var(--surface);
+
+  color: var(--text-primary);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-sm);
+
+  padding: 12px 14px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary);
+
+  box-shadow:
+    0 0 0 3px rgba(255, 107, 53, 0.12);
+}
+
+
+/* =====================================================
+   IMAGES
+   ===================================================== */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* =====================================================
+   SELECTION
+   ===================================================== */
+
+::selection {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   SCROLLBAR
+   ===================================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+   ===================================================== */
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+  .main-content {
+    width: 92%;
+    padding: 30px 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 11px 18px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .main-content {
+    width: 90%;
+    padding: 24px 0;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+}
