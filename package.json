@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "install": "cd \"backend(1)\" && npm install && cd .. && cd frontend && npm install",
-  "dev:server": "cd \"backend(1)\" && npm run dev",
+  "install": "cd \"backend\" && npm install && cd .. && cd frontend && npm install",
+  "dev:server": "cd \"backend\" && npm run dev",
   "dev:client": "cd frontend && npm run dev",
   "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
   "build": "cd frontend && npm run build",
-  "start": "cd \"backend(1)\" && npm start"
+  "start": "cd \"backend\" && npm start"
 },
 
   "keywords": [
