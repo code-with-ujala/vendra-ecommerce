@@ -28,7 +28,7 @@ const About = () => {
 
         <div className="social-links">
           <a
-            href="https://theshivanshvasu.com"
+            href="https://theujala.com"
             target="_blank"
             rel="noreferrer"
             className="social-btn"
@@ -37,7 +37,7 @@ const About = () => {
           </a>
 
           <a
-            href="https://youtube.com/@shivanshvasu"
+            href="https://youtube.com/@ujala"
             target="_blank"
             rel="noreferrer"
             className="social-btn youtube"
@@ -46,7 +46,7 @@ const About = () => {
           </a>
 
           <a
-            href="https://instagram.com/theshivanshvasuofficial"
+            href="https://instagram.com/theujalaofficial"
             target="_blank"
             rel="noreferrer"
             className="social-btn instagram"
@@ -55,7 +55,7 @@ const About = () => {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/theshivanshvasu"
+            href="https://www.linkedin.com/in/theujala"
             target="_blank"
             rel="noreferrer"
             className="social-btn linkedin"
@@ -64,7 +64,7 @@ const About = () => {
           </a>
 
           <a
-            href="https://x.com/theshivanshvasu"
+            href="https://x.com/theujala"
             target="_blank"
             rel="noreferrer"
             className="social-btn"
@@ -82,7 +82,7 @@ const About = () => {
           </a>
 
           <a
-            href="https://linktr.ee/shivanshvasu"
+            href="https://linktr.ee/ujala"
             target="_blank"
             rel="noreferrer"
             className="social-btn"

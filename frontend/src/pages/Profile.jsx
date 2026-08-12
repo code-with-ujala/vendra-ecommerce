@@ -18,7 +18,7 @@ const Profile = () => {
 
     const fetchMyOrders = async () => {
       try {
-        const res = await fetch('/api/orders/myorders', {
+        const res = await fetch('https://vendra-ecommerce.onrender.com/api/orders/myorders', {
           headers: {
             Authorization: `Bearer ${user.token}`
           }

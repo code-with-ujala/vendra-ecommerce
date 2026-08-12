@@ -9,7 +9,7 @@ const AdminUsers = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await fetch("/api/auth/users", {
+        const res = await fetch("https://vendra-ecommerce.onrender.com/api/auth/users", {
           headers: {
             Authorization: `Bearer ${user.token}`,
           },

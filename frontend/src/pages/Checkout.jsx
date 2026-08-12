@@ -167,7 +167,7 @@ const Checkout = () => {
       ========================== */
 
       const orderRes = await fetch(
-        "/api/payment/order",
+        "https://vendra-ecommerce.onrender.com/api/payment/order",
         {
           method: "POST",
 
@@ -243,7 +243,7 @@ const Checkout = () => {
             ========================== */
 
             const verifyRes = await fetch(
-              "/api/payment/verify",
+              "https://vendra-ecommerce.onrender.com/api/payment/verify",
               {
                 method: "POST",
 
@@ -301,7 +301,7 @@ const Checkout = () => {
 
             const saveOrderRes =
               await fetch(
-                "/api/orders",
+                "https://vendra-ecommerce.onrender.com/api/orders",
                 {
                   method: "POST",
 
