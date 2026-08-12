@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import { useSelector } from 'react-redux';
 import '../styles/navbar.css';
-import logo from '../assets/vendra.logo.png';
+import logo from "../assets/vendra.logo.png";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
