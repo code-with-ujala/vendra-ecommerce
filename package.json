@@ -1,17 +1,15 @@
 {
-  "name": "shopnest-full-stack",
+  "name": "vendra-Ecommerce web app",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": 
-  {
- 
+  "scripts": {
   "install": "cd \"backend(1)\" && npm install && cd .. && cd frontend && npm install",
   "dev:server": "cd \"backend(1)\" && npm run dev",
   "dev:client": "cd frontend && npm run dev",
   "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-  "build": "cd frontend && npm run build"
-
-  },
+  "build": "cd frontend && npm run build",
+  "start": "cd \"backend(1)\" && npm start"
+},
 
   "keywords": [
     "ujalamicroservice"
