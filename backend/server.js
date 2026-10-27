@@ -10,10 +10,12 @@ dotenv.config();
 connectDB();
 const app = express();
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin: [
+        "http://localhost:5173",
+        "https://vendra-ecommerce-q7h6.vercel.app"
+    ],
     credentials: true
-}
-));
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
