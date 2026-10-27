@@ -1,33 +1,44 @@
-// const express = require("express");
-
-// const router = express.Router();
-
-// router.get("/", (req, res) => {
-//     res.send("Auth route working!");
-// });
-
-// module.exports = router;
 
 const jwt = require("jsonwebtoken");
 const User = require("../model/User");
 
 const protect = async (req, res, next) => {
     try {
-        // Header se token lena
-        const token = req.headers.authorization.split(" ")[1];
+        // Check Authorization header
+        const authHeader = req.headers.authorization;
 
-        // Token verify karna
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        if (!authHeader || !authHeader.startsWith("Bearer ")) {
+            return res.status(401).json({
+                message: "Not Authorized, token missing"
+            });
+        }
 
-        // User ko database se nikalna
-        req.user = await User.findById(decoded.id).select("-password");
+        // Extract token
+        const token = authHeader.split(" ")[1];
 
-        // Agle middleware/controller par jana
+        // Verify JWT
+        const decoded = jwt.verify(
+            token,
+            process.env.JWT_SECRET
+        );
+
+        // Find user
+        const user = await User.findById(decoded.id).select("-password");
+
+        if (!user) {
+            return res.status(401).json({
+                message: "Not Authorized, user not found"
+            });
+        }
+
+        // Attach user to request
+        req.user = user;
+
         next();
 
     } catch (error) {
-        res.status(401).json({
-            message: "Not Authorized"
+        return res.status(401).json({
+            message: "Not Authorized, invalid token"
         });
     }
 };

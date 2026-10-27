@@ -51,10 +51,10 @@ const Home = () => {
 
           <div className="hero-actions">
 
-            <a href="/shop" className="btn hero-primary-btn">
+           <a href="/login" className="btn hero-primary-btn">
               Shop Now
               <span>→</span>
-            </a>
+          </a>
 
             <a href="#featured" className="hero-secondary-btn">
               Explore Collection
@@ -158,13 +158,13 @@ const Home = () => {
 
           </div>
 
-          <a
-            href="/shop"
-            className="view-all-link"
-          >
-            View all
-            <span>→</span>
-          </a>
+              <a
+              href="/login"
+              className="view-all-link"
+               >
+              View all
+              <span>→</span>
+            </a>
 
         </div>
 
@@ -307,7 +307,7 @@ const Home = () => {
           </p>
 
           <a
-            href="/shop"
+            href="/login"
             className="btn cta-button"
           >
             Start Shopping
